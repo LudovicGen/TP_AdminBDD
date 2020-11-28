@@ -1,7 +1,7 @@
 ## TP1 Admin BDD
 ---
-Intervenant/Professeur : Mr DeBest Denis
-===
+#### Intervenant/Professeur : Mr DeBest Denis
+---
 ### Création de la base de donées :
 - `CREATE DATABASE TP1; USE TP1;`
 
