@@ -1,0 +1,6 @@
+# GALERA saved state
+version: 2.1
+uuid:    5981f182-a4cc-11e6-98cc-77fabedd360d
+seqno:   1234
+safe_to_bootstrap: 1
+  
