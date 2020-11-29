@@ -2,7 +2,7 @@
 ---
 #### Intervenant/Professeur : Mr DeBest Denis
 ---
-### Création du Script qui :
+### Création du [Script SQL](script.sql) qui :
 #### Creation de la base de données
 - `CREATE DATABASE IF NOT EXISTS teams; USE teams;`
 #### Création des tables
@@ -18,7 +18,7 @@
 - `mysql -u manager -pmanager_password`
 - `mysql -u recruiter -precruiter_password`
 
-### Ajouter trois lignes dans la table games à l'aide d'un script :
+### Ajouter trois lignes dans la table games à l'aide d'un [Script SQL](insert.sql) :
 - `INSERT INTO teams.games  VALUES (NOW(), false, "obeservation");`
 - `INSERT INTO teams.games  VALUES (NOW(), true, "obeservation");`
 - `INSERT INTO teams.games  VALUES (NOW(), false, "obeservation");`
