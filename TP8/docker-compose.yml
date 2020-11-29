@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+ mariadb:
+  image: mariadb:10.5
+  restart: on-failure
+  ports:
+   - 3306
+  environment:
+    MYSQL_USER: root
+    MYSQL_ROOT_PASSWORD: pass
+  volumes:
+   - ./maria1:/var/lib/mysql
+   - ./backups:/backups
+
+ mysql_exporter:
+  image: prom/mysqld-exporter:latest
+  restart: on-failure
+  environment:
+    DATA_SOURCE_NAME: exporter:pass@(mariadb:3306)/
+  ports:
+   - 9104
+
+ prometheus:
+  image: prom/prometheus:latest
+  restart: on-failure
+  volumes:
+   - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  ports:
+   - 9090:9090
+  environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: pass
